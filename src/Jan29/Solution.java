@@ -13,26 +13,34 @@ public class Solution {
     public static<T> Node<T> reverse(Node<T> list) {
 
         Node<T> head = null;
-
-        Node<T> currentFirst = list;
+        Node<T> current = null;
 
         while(true) {
             Node<T> listLast = null;
+            Node<T> previous = null;
             Node<T> temp = list;
             while(temp != null) {
+                previous = listLast;
                 listLast = temp;
                 temp = temp.getNext();
             }
 
+            if (previous != null) {
+                previous.setNext(null);
+            } else {
+                break;
+            }
+
             if (head == null) {
                 head = listLast;
+                current = head;
             } else {
-                head.setNext(listLast);
+                current.setNext(listLast);
             }
 
         }
 
-
+        return head;
     }
 
 
