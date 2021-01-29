@@ -11,6 +11,8 @@ public class Solution {
         Node<Integer> reversed = reverse(list);
         System.out.println(reversed);
         System.out.println("Hello ");
+        System.out.println("Hello ");
+
     }
 
 
