@@ -52,7 +52,16 @@ public class Node<T> {
 
 	
 	public String toString() {
-		return "value=" + value + ", next=" + next + " ";
+		StringBuilder builder = new StringBuilder();
+		Node<T> current = this;
+		while (current != null) {
+			builder.append(current.getValue());
+			builder.append(" -> ");
+			current = current.getNext();
+		}
+
+		builder.append("|");
+		return builder.toString();
 	}
 	
 }
