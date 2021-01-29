@@ -28,17 +28,18 @@ public class Solution {
                 temp = temp.getNext();
             }
 
-            if (previous != null) {
-                previous.setNext(null);
-            } else {
-                break;
-            }
-
             if (head == null) {
                 head = listLast;
                 current = head;
             } else {
                 current.setNext(listLast);
+                current = current.getNext();
+            }
+
+            if (previous != null) {
+                previous.setNext(null);
+            } else {
+                break;
             }
 
         }
