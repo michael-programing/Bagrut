@@ -5,8 +5,11 @@ import datatypes.*;
 public class Solution {
 
 
-    public static void main(String[] args) {]
-
+    public static void main(String[] args) {
+        Node<Integer> list = Node.createFrom(1, 2, 3, 4, 5);
+        System.out.println(list);
+        Node<Integer> reversed = reverse(list);
+        System.out.println(reversed);
     }
 
 

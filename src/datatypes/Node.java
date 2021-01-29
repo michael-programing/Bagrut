@@ -40,6 +40,16 @@ public class Node<T> {
 	}
 
 
+	public static<T> Node<T> createFrom(T ... args) {
+		Node<T> head = new Node<T>(args[0]);
+		Node<T> current = head;
+		for (int i = 1; i < args.length; i++) {
+			current.setNext(new Node<T>(args[i]));
+			current = current.getNext();
+		}
+		return head;
+	}
+
 	
 	public String toString() {
 		return "value=" + value + ", next=" + next + " ";
