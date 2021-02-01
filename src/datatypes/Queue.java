@@ -34,4 +34,17 @@ public class Queue<T> {
 		return this.first.getValue();
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		Node<T> current = this.first;
+		builder.append("|");
+		while (current != null) {
+			builder.append(" <- ");
+			builder.append(current.getValue());
+			current = current.getNext();
+		}
+		return builder.toString();
+	}
+
 }

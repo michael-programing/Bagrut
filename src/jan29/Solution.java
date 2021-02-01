@@ -1,4 +1,4 @@
-package Jan29;
+package jan29;
 
 import datatypes.*;
 
